@@ -13,7 +13,7 @@ jobs:
       matrix:
         api-config:
           # === Security & Users ===
-          - { file: './xray-swagger.json', slug: 'xray-security' }
+          - { file: './xray-new.json', slug: 'xray-new' }
           - { file: './petstore1.json', slug: 'petstore' }
 
           
