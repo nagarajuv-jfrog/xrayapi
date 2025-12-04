@@ -14,6 +14,7 @@ jobs:
         api-config:
           # === Security & Users ===
           - { file: './xray-swagger.json', slug: 'xray-security' }
+          - { file: './petstore1.json', slug: 'petstore' }
 
           
         
