@@ -17,8 +17,141 @@ jobs:
           # === Security & Users ===
           - { file: './petstore1.json', slug: 'petstore' }
           - { file: './xray-new.json', slug: 'xray' }
+          
+          # === General & System Configuration ===
+          - { file: './xray-{category}.json', slug: '{category}' }
+          - { file: './xray-application_version.json', slug: 'application_version' }
+          - { file: './xray-auth.json', slug: 'auth' }
+          - { file: './xray-cleanup.json', slug: 'cleanup' }
+          - { file: './xray-configuration.json', slug: 'configuration' }
+          - { file: './xray-details.json', slug: 'details' }
+          - { file: './xray-events.json', slug: 'events' }
+          - { file: './xray-externalUpdatesConfig.json', slug: 'externalUpdatesConfig' }
+          - { file: './xray-gc.json', slug: 'gc' }
+          - { file: './xray-internal.json', slug: 'internal' }
+          - { file: './xray-misc.json', slug: 'misc' }
+          - { file: './xray-system.json', slug: 'system' }
+          - { file: './xray-xray.json', slug: 'xray' }
 
-        
+          # === Artifacts, Builds, & Indexing ===
+          - { file: './xray-artifact.json', slug: 'artifact' }
+          - { file: './xray-artifactDetails.json', slug: 'artifactDetails' }
+          - { file: './xray-binMgr.json', slug: 'binMgr' }
+          - { file: './xray-build.json', slug: 'build' }
+          - { file: './xray-build_config.json', slug: 'build_config' }
+          - { file: './xray-catalog.json', slug: 'catalog' }
+          - { file: './xray-component.json', slug: 'component' }
+          - { file: './xray-componentMapper.json', slug: 'componentMapper' }
+          - { file: './xray-dependencyGraph.json', slug: 'dependencyGraph' }
+          - { file: './xray-forceReindex.json', slug: 'forceReindex' }
+          - { file: './xray-historyScan.json', slug: 'historyScan' }
+          - { file: './xray-import.json', slug: 'import' }
+          - { file: './xray-index.json', slug: 'index' }
+          - { file: './xray-indexer-resources.json', slug: 'indexer-resources' }
+          - { file: './xray-markComponentsForAnalysisReevaluation.json', slug: 'markComponentsForAnalysisReevaluation' }
+          - { file: './xray-repo_config.json', slug: 'repo_config' }
+          - { file: './xray-repository.json', slug: 'repository' }
+          - { file: './xray-scan.json', slug: 'scan' }
+          - { file: './xray-scanArtifact.json', slug: 'scanArtifact' }
+          - { file: './xray-scanBuild.json', slug: 'scanBuild' }
+          - { file: './xray-search.json', slug: 'search' }
+
+          # === Security, Policies, & Violations ===
+          - { file: './xray-applyWatch.json', slug: 'applyWatch' }
+          - { file: './xray-artifactBlockedStatus.json', slug: 'artifactBlockedStatus' }
+          - { file: './xray-artifactViolations.json', slug: 'artifactViolations' }
+          - { file: './xray-blockDownloadSetup.json', slug: 'blockDownloadSetup' }
+          - { file: './xray-curation.json', slug: 'curation' }
+          - { file: './xray-exposures.json', slug: 'exposures' }
+          - { file: './xray-ignore_rules.json', slug: 'ignore_rules' }
+          - { file: './xray-impact.json', slug: 'impact' }
+          - { file: './xray-impact_path.json', slug: 'impact_path' }
+          - { file: './xray-license.json', slug: 'license' }
+          - { file: './xray-licenses.json', slug: 'licenses' }
+          - { file: './xray-licensesNames.json', slug: 'licensesNames' }
+          - { file: './xray-permissions.json', slug: 'permissions' }
+          - { file: './xray-policies.json', slug: 'policies' }
+          - { file: './xray-repositoriesPolicies.json', slug: 'repositoriesPolicies' }
+          - { file: './xray-security.json', slug: 'security' }
+          - { file: './xray-triggerImpactByCveAsync.json', slug: 'triggerImpactByCveAsync' }
+          - { file: './xray-triggerImpactByVulnIdAsync.json', slug: 'triggerImpactByVulnIdAsync' }
+          - { file: './xray-unblockArtifact.json', slug: 'unblockArtifact' }
+          - { file: './xray-userIssues.json', slug: 'userIssues' }
+          - { file: './xray-violations.json', slug: 'violations' }
+          - { file: './xray-watches.json', slug: 'watches' }
+
+          # === Release Bundles ===
+          - { file: './xray-release_bundle_status.json', slug: 'release_bundle_status' }
+          - { file: './xray-release_bundle_v2.json', slug: 'release_bundle_v2' }
+          - { file: './xray-release_bundle_v2_config.json', slug: 'release_bundle_v2_config' }
+          - { file: './xray-releaseBundle.json', slug: 'releaseBundle' }
+          - { file: './xray-releaseBundleStatus.json', slug: 'releaseBundleStatus' }
+          - { file: './xray-releaseBundleV2Status.json', slug: 'releaseBundleV2Status' }
+
+          # === Integrations, Reports & CI/CD ===
+          - { file: './xray-ci.json', slug: 'ci' }
+          - { file: './xray-integration.json', slug: 'integration' }
+          - { file: './xray-migration.json', slug: 'migration' }
+          - { file: './xray-monitor.json', slug: 'monitor' }
+          - { file: './xray-reports.json', slug: 'reports' }
+          - { file: './xray-summary.json', slug: 'summary' }
+          - { file: './xray-supportedTechnologies.json', slug: 'supportedTechnologies' }
+          - { file: './xray-ticketing.json', slug: 'ticketing' }
+          - { file: './xray-updates.json', slug: 'updates' }
+
+          # === UI Specific Endpoints ===
+          - { file: './xray-ui_binMgr.json', slug: 'ui_binMgr' }
+          - { file: './xray-ui_builds.json', slug: 'ui_builds' }
+          - { file: './xray-ui_component.json', slug: 'ui_component' }
+          - { file: './xray-ui_configuration.json', slug: 'ui_configuration' }
+          - { file: './xray-ui_curation.json', slug: 'ui_curation' }
+          - { file: './xray-ui_db.json', slug: 'ui_db' }
+          - { file: './xray-ui_events.json', slug: 'ui_events' }
+          - { file: './xray-ui_exposures.json', slug: 'ui_exposures' }
+          - { file: './xray-ui_failedMessages.json', slug: 'ui_failedMessages' }
+          - { file: './xray-ui_features.json', slug: 'ui_features' }
+          - { file: './xray-ui_footer.json', slug: 'ui_footer' }
+          - { file: './xray-ui_general.json', slug: 'ui_general' }
+          - { file: './xray-ui_getXrayVersion.json', slug: 'ui_getXrayVersion' }
+          - { file: './xray-ui_groups.json', slug: 'ui_groups' }
+          - { file: './xray-ui_ignoreRules.json', slug: 'ui_ignoreRules' }
+          - { file: './xray-ui_impactIssueDetails.json', slug: 'ui_impactIssueDetails' }
+          - { file: './xray-ui_impactPath.json', slug: 'ui_impactPath' }
+          - { file: './xray-ui_indexBinMgr.json', slug: 'ui_indexBinMgr' }
+          - { file: './xray-ui_indexV2.json', slug: 'ui_indexV2' }
+          - { file: './xray-ui_integration.json', slug: 'ui_integration' }
+          - { file: './xray-ui_latestVersion.json', slug: 'ui_latestVersion' }
+          - { file: './xray-ui_license.json', slug: 'ui_license' }
+          - { file: './xray-ui_licenses.json', slug: 'ui_licenses' }
+          - { file: './xray-ui_licensesNames.json', slug: 'ui_licensesNames' }
+          - { file: './xray-ui_logs.json', slug: 'ui_logs' }
+          - { file: './xray-ui_mailconfig.json', slug: 'ui_mailconfig' }
+          - { file: './xray-ui_mds.json', slug: 'ui_mds' }
+          - { file: './xray-ui_migration.json', slug: 'ui_migration' }
+          - { file: './xray-ui_monitor.json', slug: 'ui_monitor' }
+          - { file: './xray-ui_monitoring.json', slug: 'ui_monitoring' }
+          - { file: './xray-ui_on_demand.json', slug: 'ui_on_demand' }
+          - { file: './xray-ui_onboardingconfig.json', slug: 'ui_onboardingconfig' }
+          - { file: './xray-ui_permissions.json', slug: 'ui_permissions' }
+          - { file: './xray-ui_policies.json', slug: 'ui_policies' }
+          - { file: './xray-ui_projects.json', slug: 'ui_projects' }
+          - { file: './xray-ui_reports.json', slug: 'ui_reports' }
+          - { file: './xray-ui_repos_config.json', slug: 'ui_repos_config' }
+          - { file: './xray-ui_repository.json', slug: 'ui_repository' }
+          - { file: './xray-ui_sbomDependencies.json', slug: 'ui_sbomDependencies' }
+          - { file: './xray-ui_scanArtifact.json', slug: 'ui_scanArtifact' }
+          - { file: './xray-ui_settings.json', slug: 'ui_settings' }
+          - { file: './xray-ui_showRemoteRepoDeprecationPopup.json', slug: 'ui_showRemoteRepoDeprecationPopup' }
+          - { file: './xray-ui_stats.json', slug: 'ui_stats' }
+          - { file: './xray-ui_system.json', slug: 'ui_system' }
+          - { file: './xray-ui_ticketing.json', slug: 'ui_ticketing' }
+          - { file: './xray-ui_unified.json', slug: 'ui_unified' }
+          - { file: './xray-ui_update.json', slug: 'ui_update' }
+          - { file: './xray-ui_updates.json', slug: 'ui_updates' }
+          - { file: './xray-ui_userIssues.json', slug: 'ui_userIssues' }
+          - { file: './xray-ui_v1.json', slug: 'ui_v1' }
+          - { file: './xray-ui_watches.json', slug: 'ui_watches' }
+          - { file: './xray-ui_webhooks.json', slug: 'ui_webhooks' }        
 
     steps:
       - name: Checkout Code
