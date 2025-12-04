@@ -1,0 +1,30 @@
+name: Sync JFrog API Docs to ReadMe
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'openapi/*.json' # Only runs when JSON files change
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # Continues syncing other files if one fails
+      max-parallel: 5  # Prevents hitting ReadMe API rate limits
+      matrix:
+        api-config:
+          # === Security & Users ===
+          - { file: './xray-swagger.json', slug: 'xray-security' }
+          
+        
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Sync ${{ matrix.api-config.slug }}
+        uses: readmeio/rdme@v10
+        with:
+          rdme: openapi upload ${{ matrix.api-config.file }} --key=${{ secrets.README_API_KEY }} --slug=${{ matrix.api-config.slug }}
